@@ -1,0 +1,435 @@
+.class public Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;
+.super Lorg/spongycastle/math/ec/ECCurve$AbstractF2m;
+.source "SecT193R2Curve.java"
+
+
+# instance fields
+.field protected i:Lorg/spongycastle/math/ec/custom/sec/SecT193R2Point;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0xc1
+
+    const/16 v2, 0xf
+
+    .line 22
+    invoke-direct {p0, v1, v2, v0, v0}, Lorg/spongycastle/math/ec/ECCurve$AbstractF2m;-><init>(IIII)V
+
+    .line 24
+    new-instance v0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Point;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1, v1}, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Point;-><init>(Lorg/spongycastle/math/ec/ECCurve;Lorg/spongycastle/math/ec/ECFieldElement;Lorg/spongycastle/math/ec/ECFieldElement;)V
+
+    iput-object v0, p0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->i:Lorg/spongycastle/math/ec/custom/sec/SecT193R2Point;
+
+    .line 26
+    new-instance v0, Ljava/math/BigInteger;
+
+    const-string v1, "0163F35A5137C2CE3EA6ED8667190B0BC43ECD69977702709B"
+
+    invoke-static {v1}, Lorg/spongycastle/util/encoders/Hex;->a(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2, v1}, Ljava/math/BigInteger;-><init>(I[B)V
+
+    invoke-virtual {p0, v0}, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->a(Ljava/math/BigInteger;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->b:Lorg/spongycastle/math/ec/ECFieldElement;
+
+    .line 27
+    new-instance v0, Ljava/math/BigInteger;
+
+    const-string v1, "00C9BB9E8927D4D64C377E2AB2856A5B16E3EFB7F61D4316AE"
+
+    invoke-static {v1}, Lorg/spongycastle/util/encoders/Hex;->a(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Ljava/math/BigInteger;-><init>(I[B)V
+
+    invoke-virtual {p0, v0}, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->a(Ljava/math/BigInteger;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->c:Lorg/spongycastle/math/ec/ECFieldElement;
+
+    .line 28
+    new-instance v0, Ljava/math/BigInteger;
+
+    const-string v1, "010000000000000000000000015AAB561B005413CCD4EE99D5"
+
+    invoke-static {v1}, Lorg/spongycastle/util/encoders/Hex;->a(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Ljava/math/BigInteger;-><init>(I[B)V
+
+    iput-object v0, p0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->d:Ljava/math/BigInteger;
+
+    const-wide/16 v0, 0x2
+
+    .line 29
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->e:Ljava/math/BigInteger;
+
+    const/4 v0, 0x6
+
+    .line 31
+    iput v0, p0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->f:I
+
+    return-void
+.end method
+
+.method private a(Lorg/spongycastle/math/ec/ECFieldElement;)Lorg/spongycastle/math/ec/ECFieldElement;
+    .locals 8
+
+    .line 143
+    invoke-virtual {p1}, Lorg/spongycastle/math/ec/ECFieldElement;->j()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-object p1
+
+    .line 148
+    :cond_0
+    sget-object v0, Lorg/spongycastle/math/ec/ECConstants;->c:Ljava/math/BigInteger;
+
+    invoke-virtual {p0, v0}, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->a(Ljava/math/BigInteger;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v0
+
+    .line 153
+    new-instance v1, Ljava/util/Random;
+
+    invoke-direct {v1}, Ljava/util/Random;-><init>()V
+
+    .line 156
+    :cond_1
+    new-instance v2, Ljava/math/BigInteger;
+
+    const/16 v3, 0xc1
+
+    invoke-direct {v2, v3, v1}, Ljava/math/BigInteger;-><init>(ILjava/util/Random;)V
+
+    invoke-virtual {p0, v2}, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->a(Ljava/math/BigInteger;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v2
+
+    const/4 v4, 0x1
+
+    move-object v5, p1
+
+    move-object v6, v0
+
+    :goto_0
+    if-ge v4, v3, :cond_2
+
+    .line 161
+    invoke-virtual {v5}, Lorg/spongycastle/math/ec/ECFieldElement;->e()Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v5
+
+    .line 162
+    invoke-virtual {v6}, Lorg/spongycastle/math/ec/ECFieldElement;->e()Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v2}, Lorg/spongycastle/math/ec/ECFieldElement;->c(Lorg/spongycastle/math/ec/ECFieldElement;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Lorg/spongycastle/math/ec/ECFieldElement;->a(Lorg/spongycastle/math/ec/ECFieldElement;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v6
+
+    .line 163
+    invoke-virtual {v5, p1}, Lorg/spongycastle/math/ec/ECFieldElement;->a(Lorg/spongycastle/math/ec/ECFieldElement;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v5
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    .line 165
+    :cond_2
+    invoke-virtual {v5}, Lorg/spongycastle/math/ec/ECFieldElement;->j()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    .line 169
+    :cond_3
+    invoke-virtual {v6}, Lorg/spongycastle/math/ec/ECFieldElement;->e()Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v6}, Lorg/spongycastle/math/ec/ECFieldElement;->a(Lorg/spongycastle/math/ec/ECFieldElement;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v2
+
+    .line 171
+    invoke-virtual {v2}, Lorg/spongycastle/math/ec/ECFieldElement;->j()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    return-object v6
+.end method
+
+
+# virtual methods
+.method public a()I
+    .locals 1
+
+    const/16 v0, 0xc1
+
+    return v0
+.end method
+
+.method public a(Ljava/math/BigInteger;)Lorg/spongycastle/math/ec/ECFieldElement;
+    .locals 1
+
+    .line 57
+    new-instance v0, Lorg/spongycastle/math/ec/custom/sec/SecT193FieldElement;
+
+    invoke-direct {v0, p1}, Lorg/spongycastle/math/ec/custom/sec/SecT193FieldElement;-><init>(Ljava/math/BigInteger;)V
+
+    return-object v0
+.end method
+
+.method protected a(ILjava/math/BigInteger;)Lorg/spongycastle/math/ec/ECPoint;
+    .locals 3
+
+    .line 91
+    invoke-virtual {p0, p2}, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->a(Ljava/math/BigInteger;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object p2
+
+    .line 92
+    invoke-virtual {p2}, Lorg/spongycastle/math/ec/ECFieldElement;->j()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    .line 94
+    iget-object p1, p0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->c:Lorg/spongycastle/math/ec/ECFieldElement;
+
+    invoke-virtual {p1}, Lorg/spongycastle/math/ec/ECFieldElement;->g()Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    .line 98
+    :cond_0
+    invoke-virtual {p2}, Lorg/spongycastle/math/ec/ECFieldElement;->e()Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lorg/spongycastle/math/ec/ECFieldElement;->f()Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->c:Lorg/spongycastle/math/ec/ECFieldElement;
+
+    invoke-virtual {v0, v2}, Lorg/spongycastle/math/ec/ECFieldElement;->c(Lorg/spongycastle/math/ec/ECFieldElement;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->b:Lorg/spongycastle/math/ec/ECFieldElement;
+
+    invoke-virtual {v0, v2}, Lorg/spongycastle/math/ec/ECFieldElement;->a(Lorg/spongycastle/math/ec/ECFieldElement;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Lorg/spongycastle/math/ec/ECFieldElement;->a(Lorg/spongycastle/math/ec/ECFieldElement;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v0
+
+    .line 99
+    invoke-direct {p0, v0}, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->a(Lorg/spongycastle/math/ec/ECFieldElement;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    .line 102
+    invoke-virtual {v0}, Lorg/spongycastle/math/ec/ECFieldElement;->k()Z
+
+    move-result v2
+
+    if-ne p1, v1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eq v2, p1, :cond_2
+
+    .line 104
+    invoke-virtual {v0}, Lorg/spongycastle/math/ec/ECFieldElement;->c()Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object v0
+
+    .line 107
+    :cond_2
+    invoke-virtual {p0}, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->k()I
+
+    move-result p1
+
+    packed-switch p1, :pswitch_data_0
+
+    .line 117
+    invoke-virtual {v0, p2}, Lorg/spongycastle/math/ec/ECFieldElement;->c(Lorg/spongycastle/math/ec/ECFieldElement;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    .line 112
+    :pswitch_0
+    invoke-virtual {v0, p2}, Lorg/spongycastle/math/ec/ECFieldElement;->a(Lorg/spongycastle/math/ec/ECFieldElement;)Lorg/spongycastle/math/ec/ECFieldElement;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    :goto_1
+    if-eqz p1, :cond_4
+
+    .line 129
+    invoke-virtual {p0, p2, p1, v1}, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->a(Lorg/spongycastle/math/ec/ECFieldElement;Lorg/spongycastle/math/ec/ECFieldElement;Z)Lorg/spongycastle/math/ec/ECPoint;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 126
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Invalid point compression"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x5
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method protected a(Lorg/spongycastle/math/ec/ECFieldElement;Lorg/spongycastle/math/ec/ECFieldElement;Z)Lorg/spongycastle/math/ec/ECPoint;
+    .locals 1
+
+    .line 62
+    new-instance v0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Point;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Point;-><init>(Lorg/spongycastle/math/ec/ECCurve;Lorg/spongycastle/math/ec/ECFieldElement;Lorg/spongycastle/math/ec/ECFieldElement;Z)V
+
+    return-object v0
+.end method
+
+.method protected a(Lorg/spongycastle/math/ec/ECFieldElement;Lorg/spongycastle/math/ec/ECFieldElement;[Lorg/spongycastle/math/ec/ECFieldElement;Z)Lorg/spongycastle/math/ec/ECPoint;
+    .locals 7
+
+    .line 67
+    new-instance v6, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Point;
+
+    move-object v0, v6
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move v5, p4
+
+    invoke-direct/range {v0 .. v5}, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Point;-><init>(Lorg/spongycastle/math/ec/ECCurve;Lorg/spongycastle/math/ec/ECFieldElement;Lorg/spongycastle/math/ec/ECFieldElement;[Lorg/spongycastle/math/ec/ECFieldElement;Z)V
+
+    return-object v6
+.end method
+
+.method public a(I)Z
+    .locals 1
+
+    const/4 v0, 0x6
+
+    if-eq p1, v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method protected c()Lorg/spongycastle/math/ec/ECCurve;
+    .locals 1
+
+    .line 36
+    new-instance v0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;
+
+    invoke-direct {v0}, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;-><init>()V
+
+    return-object v0
+.end method
+
+.method public e()Lorg/spongycastle/math/ec/ECPoint;
+    .locals 1
+
+    .line 72
+    iget-object v0, p0, Lorg/spongycastle/math/ec/custom/sec/SecT193R2Curve;->i:Lorg/spongycastle/math/ec/custom/sec/SecT193R2Point;
+
+    return-object v0
+.end method
+
+.method public o()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method

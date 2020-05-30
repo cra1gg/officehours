@@ -1,0 +1,166 @@
+.class public Lcom/polidea/b/b/d/n;
+.super Ljava/lang/Object;
+.source "ScanRecordImplCompat.java"
+
+# interfaces
+.implements Lcom/polidea/b/c/c;
+
+
+# instance fields
+.field private final a:I
+
+.field private final b:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Landroid/os/ParcelUuid;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final c:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray<",
+            "[B>;"
+        }
+    .end annotation
+.end field
+
+.field private final d:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Landroid/os/ParcelUuid;",
+            "[B>;"
+        }
+    .end annotation
+.end field
+
+.field private final e:I
+
+.field private final f:Ljava/lang/String;
+
+.field private final g:[B
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/List;Landroid/util/SparseArray;Ljava/util/Map;IILjava/lang/String;[B)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroid/os/ParcelUuid;",
+            ">;",
+            "Landroid/util/SparseArray<",
+            "[B>;",
+            "Ljava/util/Map<",
+            "Landroid/os/ParcelUuid;",
+            "[B>;II",
+            "Ljava/lang/String;",
+            "[B)V"
+        }
+    .end annotation
+
+    .line 44
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 45
+    iput-object p1, p0, Lcom/polidea/b/b/d/n;->b:Ljava/util/List;
+
+    .line 46
+    iput-object p2, p0, Lcom/polidea/b/b/d/n;->c:Landroid/util/SparseArray;
+
+    .line 47
+    iput-object p3, p0, Lcom/polidea/b/b/d/n;->d:Ljava/util/Map;
+
+    .line 48
+    iput-object p6, p0, Lcom/polidea/b/b/d/n;->f:Ljava/lang/String;
+
+    .line 49
+    iput p4, p0, Lcom/polidea/b/b/d/n;->a:I
+
+    .line 50
+    iput p5, p0, Lcom/polidea/b/b/d/n;->e:I
+
+    .line 51
+    iput-object p7, p0, Lcom/polidea/b/b/d/n;->g:[B
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Landroid/os/ParcelUuid;",
+            ">;"
+        }
+    .end annotation
+
+    .line 68
+    iget-object v0, p0, Lcom/polidea/b/b/d/n;->b:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public a(I)[B
+    .locals 1
+
+    .line 85
+    iget-object v0, p0, Lcom/polidea/b/b/d/n;->c:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [B
+
+    return-object p1
+.end method
+
+.method public a(Landroid/os/ParcelUuid;)[B
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    .line 104
+    :cond_0
+    iget-object v0, p0, Lcom/polidea/b/b/d/n;->d:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [B
+
+    return-object p1
+.end method
+
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    .line 123
+    iget-object v0, p0, Lcom/polidea/b/b/d/n;->f:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public c()[B
+    .locals 1
+
+    .line 130
+    iget-object v0, p0, Lcom/polidea/b/b/d/n;->g:[B
+
+    return-object v0
+.end method

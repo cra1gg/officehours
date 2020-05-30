@@ -1,0 +1,14 @@
+.class synthetic Lcom/polidea/b/x$1;
+.super Ljava/lang/Object;
+.source "ConnectionSetup.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/polidea/b/x;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1008
+    name = null
+.end annotation

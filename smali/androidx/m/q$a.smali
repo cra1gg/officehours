@@ -1,0 +1,92 @@
+.class public final Landroidx/m/q$a;
+.super Ljava/lang/Object;
+.source "R.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/m/q;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+
+# static fields
+.field public static final action_container:I = 0x7f11019b
+
+.field public static final action_divider:I = 0x7f1101a2
+
+.field public static final action_image:I = 0x7f11019c
+
+.field public static final action_text:I = 0x7f11019d
+
+.field public static final actions:I = 0x7f1101aa
+
+.field public static final async:I = 0x7f1100ad
+
+.field public static final blocking:I = 0x7f1100ae
+
+.field public static final chronometer:I = 0x7f1101a7
+
+.field public static final forever:I = 0x7f1100af
+
+.field public static final ghost_view:I = 0x7f11003a
+
+.field public static final icon:I = 0x7f110115
+
+.field public static final icon_group:I = 0x7f1101ab
+
+.field public static final info:I = 0x7f1101a8
+
+.field public static final italic:I = 0x7f1100b0
+
+.field public static final line1:I = 0x7f11003e
+
+.field public static final line3:I = 0x7f11003f
+
+.field public static final normal:I = 0x7f110076
+
+.field public static final notification_background:I = 0x7f1101a9
+
+.field public static final notification_main_column:I = 0x7f1101a4
+
+.field public static final notification_main_column_container:I = 0x7f1101a3
+
+.field public static final parent_matrix:I = 0x7f110043
+
+.field public static final right_icon:I = 0x7f1101ac
+
+.field public static final right_side:I = 0x7f1101a5
+
+.field public static final save_image_matrix:I = 0x7f11004f
+
+.field public static final save_non_transition_alpha:I = 0x7f110050
+
+.field public static final save_scale_type:I = 0x7f110051
+
+.field public static final tag_transition_group:I = 0x7f11005a
+
+.field public static final tag_unhandled_key_event_manager:I = 0x7f11005b
+
+.field public static final tag_unhandled_key_listeners:I = 0x7f11005c
+
+.field public static final text:I = 0x7f11005d
+
+.field public static final text2:I = 0x7f11005e
+
+.field public static final time:I = 0x7f1101a6
+
+.field public static final title:I = 0x7f110062
+
+.field public static final transition_current_scene:I = 0x7f110063
+
+.field public static final transition_layout_save:I = 0x7f110064
+
+.field public static final transition_position:I = 0x7f110065
+
+.field public static final transition_scene_layoutid_cache:I = 0x7f110066
+
+.field public static final transition_transform:I = 0x7f110067

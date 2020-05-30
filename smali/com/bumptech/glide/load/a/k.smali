@@ -1,0 +1,90 @@
+.class public final Lcom/bumptech/glide/load/a/k;
+.super Ljava/lang/Object;
+.source "InputStreamRewinder.java"
+
+# interfaces
+.implements Lcom/bumptech/glide/load/a/e;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/bumptech/glide/load/a/k$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/bumptech/glide/load/a/e<",
+        "Ljava/io/InputStream;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field private final a:Lcom/bumptech/glide/load/d/a/n;
+
+
+# direct methods
+.method constructor <init>(Ljava/io/InputStream;Lcom/bumptech/glide/load/b/a/b;)V
+    .locals 1
+
+    .line 21
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 22
+    new-instance v0, Lcom/bumptech/glide/load/d/a/n;
+
+    invoke-direct {v0, p1, p2}, Lcom/bumptech/glide/load/d/a/n;-><init>(Ljava/io/InputStream;Lcom/bumptech/glide/load/b/a/b;)V
+
+    iput-object v0, p0, Lcom/bumptech/glide/load/a/k;->a:Lcom/bumptech/glide/load/d/a/n;
+
+    .line 23
+    iget-object p1, p0, Lcom/bumptech/glide/load/a/k;->a:Lcom/bumptech/glide/load/d/a/n;
+
+    const/high16 p2, 0x500000
+
+    invoke-virtual {p1, p2}, Lcom/bumptech/glide/load/d/a/n;->mark(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public synthetic a()Ljava/lang/Object;
+    .locals 1
+
+    .line 14
+    invoke-virtual {p0}, Lcom/bumptech/glide/load/a/k;->c()Ljava/io/InputStream;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public b()V
+    .locals 1
+
+    .line 35
+    iget-object v0, p0, Lcom/bumptech/glide/load/a/k;->a:Lcom/bumptech/glide/load/d/a/n;
+
+    invoke-virtual {v0}, Lcom/bumptech/glide/load/d/a/n;->b()V
+
+    return-void
+.end method
+
+.method public c()Ljava/io/InputStream;
+    .locals 1
+
+    .line 29
+    iget-object v0, p0, Lcom/bumptech/glide/load/a/k;->a:Lcom/bumptech/glide/load/d/a/n;
+
+    invoke-virtual {v0}, Lcom/bumptech/glide/load/d/a/n;->reset()V
+
+    .line 30
+    iget-object v0, p0, Lcom/bumptech/glide/load/a/k;->a:Lcom/bumptech/glide/load/d/a/n;
+
+    return-object v0
+.end method

@@ -1,0 +1,68 @@
+.class public Lorg/spongycastle/crypto/tls/DefaultTlsAgreementCredentials;
+.super Lorg/spongycastle/crypto/tls/AbstractTlsAgreementCredentials;
+.source "DefaultTlsAgreementCredentials.java"
+
+
+# instance fields
+.field protected a:Lorg/spongycastle/crypto/tls/Certificate;
+
+.field protected b:Lorg/spongycastle/crypto/params/AsymmetricKeyParameter;
+
+.field protected c:Lorg/spongycastle/crypto/BasicAgreement;
+
+.field protected d:Z
+
+
+# virtual methods
+.method public a()Lorg/spongycastle/crypto/tls/Certificate;
+    .locals 1
+
+    .line 63
+    iget-object v0, p0, Lorg/spongycastle/crypto/tls/DefaultTlsAgreementCredentials;->a:Lorg/spongycastle/crypto/tls/Certificate;
+
+    return-object v0
+.end method
+
+.method public a(Lorg/spongycastle/crypto/params/AsymmetricKeyParameter;)[B
+    .locals 2
+
+    .line 68
+    iget-object v0, p0, Lorg/spongycastle/crypto/tls/DefaultTlsAgreementCredentials;->c:Lorg/spongycastle/crypto/BasicAgreement;
+
+    iget-object v1, p0, Lorg/spongycastle/crypto/tls/DefaultTlsAgreementCredentials;->b:Lorg/spongycastle/crypto/params/AsymmetricKeyParameter;
+
+    invoke-interface {v0, v1}, Lorg/spongycastle/crypto/BasicAgreement;->a(Lorg/spongycastle/crypto/CipherParameters;)V
+
+    .line 69
+    iget-object v0, p0, Lorg/spongycastle/crypto/tls/DefaultTlsAgreementCredentials;->c:Lorg/spongycastle/crypto/BasicAgreement;
+
+    invoke-interface {v0, p1}, Lorg/spongycastle/crypto/BasicAgreement;->b(Lorg/spongycastle/crypto/CipherParameters;)Ljava/math/BigInteger;
+
+    move-result-object p1
+
+    .line 71
+    iget-boolean v0, p0, Lorg/spongycastle/crypto/tls/DefaultTlsAgreementCredentials;->d:Z
+
+    if-eqz v0, :cond_0
+
+    .line 73
+    invoke-static {p1}, Lorg/spongycastle/util/BigIntegers;->a(Ljava/math/BigInteger;)[B
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 76
+    :cond_0
+    iget-object v0, p0, Lorg/spongycastle/crypto/tls/DefaultTlsAgreementCredentials;->c:Lorg/spongycastle/crypto/BasicAgreement;
+
+    invoke-interface {v0}, Lorg/spongycastle/crypto/BasicAgreement;->a()I
+
+    move-result v0
+
+    invoke-static {v0, p1}, Lorg/spongycastle/util/BigIntegers;->a(ILjava/math/BigInteger;)[B
+
+    move-result-object p1
+
+    return-object p1
+.end method

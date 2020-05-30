@@ -1,0 +1,82 @@
+.class public final Lcom/polidea/b/k;
+.super Ljava/lang/Object;
+.source "ClientComponent_ClientModule_ProvideContentResolverFactory.java"
+
+# interfaces
+.implements La/a/a/c;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "La/a/a/c<",
+        "Landroid/content/ContentResolver;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field private final a:Lcom/polidea/b/a$b;
+
+
+# direct methods
+.method public constructor <init>(Lcom/polidea/b/a$b;)V
+    .locals 0
+
+    .line 13
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 14
+    iput-object p1, p0, Lcom/polidea/b/k;->a:Lcom/polidea/b/a$b;
+
+    return-void
+.end method
+
+.method public static a(Lcom/polidea/b/a$b;)Lcom/polidea/b/k;
+    .locals 1
+
+    .line 26
+    new-instance v0, Lcom/polidea/b/k;
+
+    invoke-direct {v0, p0}, Lcom/polidea/b/k;-><init>(Lcom/polidea/b/a$b;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public synthetic a()Ljava/lang/Object;
+    .locals 1
+
+    .line 8
+    invoke-virtual {p0}, Lcom/polidea/b/k;->b()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public b()Landroid/content/ContentResolver;
+    .locals 2
+
+    .line 19
+    iget-object v0, p0, Lcom/polidea/b/k;->a:Lcom/polidea/b/a$b;
+
+    .line 20
+    invoke-virtual {v0}, Lcom/polidea/b/a$b;->f()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "Cannot return null from a non-@Nullable @Provides method"
+
+    .line 19
+    invoke-static {v0, v1}, La/a/a/d;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/ContentResolver;
+
+    return-object v0
+.end method

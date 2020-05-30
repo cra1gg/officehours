@@ -1,0 +1,197 @@
+.class public Lcom/polidea/a/c/g;
+.super Ljava/lang/Object;
+.source "LogLevel.java"
+
+
+# direct methods
+.method public static a(Ljava/lang/String;)I
+    .locals 5
+
+    .line 10
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v1, 0x5
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const/4 v4, 0x2
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "Verbose"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x0
+
+    goto :goto_1
+
+    :sswitch_1
+    const-string v0, "Error"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x4
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v0, "Debug"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string v0, "None"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x5
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string v0, "Info"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x2
+
+    goto :goto_1
+
+    :sswitch_5
+    const-string v0, "Warning"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x3
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    const/4 p0, -0x1
+
+    :goto_1
+    packed-switch p0, :pswitch_data_0
+
+    const p0, 0x7fffffff
+
+    return p0
+
+    :pswitch_0
+    const/4 p0, 0x6
+
+    return p0
+
+    :pswitch_1
+    return v1
+
+    :pswitch_2
+    return v2
+
+    :pswitch_3
+    return v3
+
+    :pswitch_4
+    return v4
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x59c1b884 -> :sswitch_5
+        0x22d8ce -> :sswitch_4
+        0x252358 -> :sswitch_3
+        0x3eda633 -> :sswitch_2
+        0x401e1e8 -> :sswitch_1
+        0x78261162 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static a(I)Ljava/lang/String;
+    .locals 0
+
+    packed-switch p0, :pswitch_data_0
+
+    const-string p0, "None"
+
+    return-object p0
+
+    :pswitch_0
+    const-string p0, "Error"
+
+    return-object p0
+
+    :pswitch_1
+    const-string p0, "Warning"
+
+    return-object p0
+
+    :pswitch_2
+    const-string p0, "Info"
+
+    return-object p0
+
+    :pswitch_3
+    const-string p0, "Debug"
+
+    return-object p0
+
+    :pswitch_4
+    const-string p0, "Verbose"
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
